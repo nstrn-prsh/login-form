@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*ckground: rgb(61,70,111);
+              background: -webkit-linear-gradient(to left, rgba(61,70,111,1) 0%, rgba(236,163,146,1) 100%);
+              background: -o-linear-gradient(252deg, rgba(61,70,111,1) 0%, rgba(236,163,146,1) 100%);
+              background: -moz-linear-gradient(252deg, rgba(61,70,111,1) 0%, rgba(236,163,146,1) 100%);
+              background: linear-gradient(342deg, rgba(61,70,111,1) 0%, rgba(236,163,146,1) 100%);*/
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(61, 70, 111, 0.5);
+    color: #4c4846;
+}
+
+.canvas-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(61, 70, 111);
+    background: linear-gradient( to left, rgba(61, 70, 111, 0.7) 0%, rgba(142, 131, 147, 0.7) 100%);
+}
+
+#canvas {
+    background-color: #ffffff;
+}
+
+
+/* **** background of the form **** */
+
+.loginbox {
+    width: 620px;
+    background: #cacee4;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 95px 30px 10px 30px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px grey;
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    border-radius: 50%;
+    top: -50px;
+    left: calc(49% - 49px);
+}
+
+.col {
+    float: left;
+    width: 50%;
+    margin: auto;
+    padding: 50 50px;
+    margin-top: 6px;
+}
+
+h2 {
+    text-align: center;
+    font-family: arial;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #fff;
+}
+
+
+/* *** right box which is for social media *** */
+
+.left {
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    height: 30px;
+    font-weight: bold;
+    margin: 2px;
+    opacity: 0.9;
+}
+
+.texture {
+    margin-right: 5px;
+    margin-left: 8px;
+}
+
+.left:hover {
+    opacity: 1;
+}
+
+.fb {
+    background-color: #4862a3;
+}
+
+.twitter {
+    background-color: #059cf1;
+}
+
+.google {
+    background-color: #dd4e41;
+}
+
+.github {
+    background-color: #7c7c7c;
+}
+
+.phone {
+    background-color: #87bd94;
+}
+
+
+/* *** left box will be used for manual login *** */
+
+.loginbox p {
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input,
+.btn {
+    width: 100%;
+    margin-bottom: 20px;
+    color: #fff;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.loginbox input[type="text"],
+input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    font-size: 14px;
+}
+
+.loginbox input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #767188;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    opacity: 0.95;
+}
+
+.loginbox input[type="submit"]:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.loginboxa {
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(61, 70, 111, 1);
+    text-decoration: none;
+    display: inline-block;
+    padding: 1px;
+    margin-bottom: 15px;
+}
+
+.logina {
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1px;
+    margin-bottom: 15px;
+}
+
+
+/* fallowing password rules but it shows in right box instead of social media */
+
+#message {
+    background: #cacee4;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+    width: 230px;
+    height: 330px;
+    position: absolute;
+    bottom: 70;
+    z-index: 20;
+    display: none;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+
+/* Add a green text color and a checkmark when the requirements are right */
+
+.valid {
+    color: rgba(142, 131, 147, 1);
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "*";
+}
+
+
+/* Add a red text color and an "x" when the requirements are wrong */
+
+.invalid {
+    color: rgba(61, 70, 111, 1);
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "?";
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* vertical line */
+
+.vl {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border: 2px solid #ddd;
+    height: 400px;
+}
+
+
+/* text inside the vertical line */
+
+.vl-innertext {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #cacee4;
+    border-radius: 50%;
+    padding: 8px 10px;
+}
+
+
+/* ResponsiAve layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 650px) {
+    .col {
+        width: 100%;
+        margin-top: 0;
+    }
+    /* hide the vertical line */
+    .vl {
+        display: none;
+    }
+    #message {
+        width: 480px;
+    }
+}
+
+
+/* nastaran.p.sh.77@gmail.com */
