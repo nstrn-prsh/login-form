@@ -1,2 +1,6 @@
-this is my first log in form that i have to work more on it.
-I made it with html, css, js.
+#first login form
+1.HTML
+2.CSS
+3.vanilla JavaScript
+  *form validation
+  *particles js
